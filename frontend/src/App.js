@@ -27,6 +27,7 @@ function App() {
       .get(`https://sellerkin-keywordvolume-ugah.vercel.app/api/getkeyword`)
       .then((res) => {
         setkeywordlist(res.data);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, [update]);
@@ -92,7 +93,7 @@ function App() {
                 <th>Month & Year</th>
               </tr>
 
-              {keywordlist.length > 0
+              {/* {keywordlist.length > 0
                 ? keywordlist.map((val, i) => (
                     <tr
                       key={i}
@@ -107,7 +108,7 @@ function App() {
                       </td>
                     </tr>
                   ))
-                : ""}
+                : ""} */}
             </table>
           </div>
         ) : (
