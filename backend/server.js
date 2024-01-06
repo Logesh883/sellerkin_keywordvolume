@@ -30,7 +30,7 @@ app.use((err, req, res, next) => {
   res.status(err.status).json({ err: err.message, success: false });
 });
 
-app.get("https://sellerkin-volume.vercel.app", (req, res) => {
+app.get("/", (req, res) => {
   res.json("hello");
 });
 app.listen(PORT, () => {
