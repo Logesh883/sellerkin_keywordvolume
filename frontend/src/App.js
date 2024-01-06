@@ -22,7 +22,6 @@ function App() {
     "December",
   ];
   useEffect(() => {
-    console.log(req.headers.originpath);
     focusRef.current.focus();
     axios
       .get(`https://sellerkin-keywordvolume-ugah.vercel.app/api/getkeyword`)
