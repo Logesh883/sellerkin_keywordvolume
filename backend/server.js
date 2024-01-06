@@ -28,7 +28,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use("/api", router);
+app.use("https://sellerkin-keywordvolume.vercel.app/api", router);
 app.use((err, req, res, next) => {
   err = errHandling(err.status, err.message);
   res.status(err.status).json({ err: err.message, success: false });
