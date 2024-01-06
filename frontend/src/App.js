@@ -30,7 +30,7 @@ function App() {
       })
       .catch((err) => console.log(err));
   }, [update]);
-
+  axios.defaults.withCredentials = true;
   const Submit = async (e) => {
     e.preventDefault();
     if (keyword !== "") {
