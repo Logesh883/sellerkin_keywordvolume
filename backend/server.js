@@ -29,6 +29,10 @@ app.use((err, req, res, next) => {
   err = errHandling(err.status, err.message);
   res.status(err.status).json({ err: err.message, success: false });
 });
+
+app.get("/", (req, res) => {
+  res.json("hello");
+});
 app.listen(PORT, () => {
   console.log(`Served on ${PORT}`);
 });
