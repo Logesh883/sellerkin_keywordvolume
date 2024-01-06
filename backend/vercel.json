@@ -6,7 +6,13 @@
       "use": "@vercel/node"
     }
   ],
-  "route": [
+
+  "routes": [
+    {
+      "handle": "router",
+      "src": "https://sellerkin-keywordvolume.vercel.app/api/(.*)",
+      "method": ["GET", "POST"]
+    },
     {
       "src": "/(.*)",
       "dest": "/"
