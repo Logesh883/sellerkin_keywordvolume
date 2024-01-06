@@ -10,7 +10,7 @@
   "routes": [
     {
       "handle": "router",
-      "src": "https://sellerkin-keywordvolume.vercel.app/api/(.*)",
+      "src": "/api/(.*)",
       "method": ["GET", "POST"]
     },
     {
