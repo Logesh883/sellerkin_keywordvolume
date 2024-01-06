@@ -22,9 +22,10 @@ function App() {
     "December",
   ];
   useEffect(() => {
+    console.log(req.headers.originpath);
     focusRef.current.focus();
     axios
-      .get(`https://sellerkin-keywordvolume.vercel.app/api/getkeyword`)
+      .get(`https://sellerkin-keywordvolume-ugah.vercel.app/api/getkeyword`)
       .then((res) => {
         setkeywordlist(res.data);
       })
@@ -35,9 +36,12 @@ function App() {
     e.preventDefault();
     if (keyword !== "") {
       await axios
-        .post("https://sellerkin-keywordvolume.vercel.app/api/setkeyword", {
-          keyword,
-        })
+        .post(
+          "https://sellerkin-keywordvolume-ugah.vercel.app/api/setkeyword",
+          {
+            keyword,
+          }
+        )
         .then((res) => {
           console.log(res.data.msg);
           setupdate(!update);
