@@ -7,9 +7,5 @@
     }
   ],
 
-  "routes": [
-    { "src": "/api/getkeywords", "dest": "./Controllers/getKeywords.js" },
-    { "src": "/api/setKeyword", "dest": "./Controllers/setKeywords.js" },
-    { "src": "/(.*)", "dest": "server.js" }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
 }

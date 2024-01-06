@@ -90,7 +90,7 @@ function App() {
                 <th>Month & Year</th>
               </tr>
 
-              {/* {keywordlist.length > 0
+              {keywordlist.length > 0
                 ? keywordlist.map((val, i) => (
                     <tr
                       key={i}
@@ -105,7 +105,7 @@ function App() {
                       </td>
                     </tr>
                   ))
-                : ""} */}
+                : ""}
             </table>
           </div>
         ) : (

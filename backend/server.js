@@ -40,3 +40,6 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Served on ${PORT}`);
 });
+
+// { "src": "/api/getkeywords", "dest": "./Controllers/getKeywords.js" },
+// { "src": "/api/setKeyword", "dest": "./Controllers/setKeywords.js" },
