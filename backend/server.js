@@ -18,7 +18,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://sellerkin-keywordvolume-38qe.vercel.app"],
+    origin: "*",
     methods: ["POST", "GET"],
     credentials: true,
   })
