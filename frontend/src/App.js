@@ -92,20 +92,22 @@ function App() {
                 <th>Month & Year</th>
               </tr>
 
-              {keywordlist.map((val, i) => (
-                <tr
-                  key={i}
-                  className="hover:bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:text-white"
-                >
-                  <td>{val.keyword}</td>
-                  <td>{val.count}</td>
-                  <td className="">
-                    {months[val.month[0]]}
-                    {"   "}
-                    {val.month[1]}
-                  </td>
-                </tr>
-              ))}
+              {keywordlist.length > 0
+                ? keywordlist.map((val, i) => (
+                    <tr
+                      key={i}
+                      className="hover:bg-gradient-to-r from-pink-500 to-fuchsia-500 hover:text-white"
+                    >
+                      <td>{val.keyword}</td>
+                      <td>{val.count}</td>
+                      <td className="">
+                        {months[val.month[0]]}
+                        {"   "}
+                        {val.month[1]}
+                      </td>
+                    </tr>
+                  ))
+                : ""}
             </table>
           </div>
         ) : (
