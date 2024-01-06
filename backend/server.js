@@ -18,7 +18,7 @@ mongoose
 console.log("Starting server...");
 app.use(
   cors({
-    origin: "*",
+    origin: "https://sellerkin-keywordvolume-ugah.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
