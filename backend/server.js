@@ -15,7 +15,7 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+console.log("Starting server...");
 app.use(
   cors({
     origin: "*",
