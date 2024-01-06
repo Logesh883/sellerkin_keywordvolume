@@ -16,6 +16,10 @@ mongoose
     console.log(err);
   });
 console.log("Starting server...");
+app.use((req, res, next) => {
+  console.log("Request Origin:", req.headers.origin);
+  next();
+});
 app.use(
   cors({
     origin: "https://sellerkin-keywordvolume-ugah.vercel.app",
