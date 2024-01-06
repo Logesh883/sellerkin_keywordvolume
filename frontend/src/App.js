@@ -42,6 +42,7 @@ function App() {
         .then((res) => {
           console.log(res.data.msg);
           setupdate(!update);
+          setkeyword("");
         })
         .catch((err) => console.log(err));
     }
