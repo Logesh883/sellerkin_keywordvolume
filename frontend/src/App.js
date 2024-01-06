@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     focusRef.current.focus();
     axios
-      .get(`http://localhost:4000/api/getkeyword`)
+      .get(`https://sellerkin-keywordvolume.vercel.app/api/getkeyword`)
       .then((res) => {
         setkeywordlist(res.data);
       })
@@ -35,7 +35,9 @@ function App() {
     e.preventDefault();
     if (keyword !== "") {
       await axios
-        .post("http://localhost:4000/api/setkeyword", { keyword })
+        .post("https://sellerkin-keywordvolume.vercel.app/api/setkeyword", {
+          keyword,
+        })
         .then((res) => {
           console.log(res.data.msg);
           setupdate(!update);

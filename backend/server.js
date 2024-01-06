@@ -16,7 +16,13 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://sellerkin-keywordvolume.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api", router);
 app.use((err, req, res, next) => {
